@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Page Header Elements -->
+<div class="page-header">
+    <div>
+        <h2 class="page-title">Dashboard & Story</h2>
+        <p class="page-subtitle">Interactive exploration of 21,609 properties in our housing dataset.</p>
+    </div>
+</div>
+
+<!-- KPI Cards Section -->
+<div class="kpi-grid">
+    <div class="kpi-card">
+        <div class="kpi-header">
+            <h3 class="kpi-title">Total Properties</h3>
+            <div class="kpi-icon-wrapper bg-blue-subtle">
+                <i class="ph ph-buildings text-blue"></i>
+            </div>
+        </div>
+        <div class="kpi-value">21,609</div>
+    </div>
+    
+    <div class="kpi-card">
+        <div class="kpi-header">
+            <h3 class="kpi-title">Average Sale Price</h3>
+            <div class="kpi-icon-wrapper bg-green-subtle">
+                <i class="ph ph-currency-dollar text-green"></i>
+            </div>
+        </div>
+        <div class="kpi-value">$540,088</div>
+    </div>
+
+    <div class="kpi-card">
+        <div class="kpi-header">
+            <h3 class="kpi-title">Average Flat Area</h3>
+            <div class="kpi-icon-wrapper bg-purple-subtle">
+                <i class="ph ph-selection-all text-purple"></i>
+            </div>
+        </div>
+        <div class="kpi-value">2,080 <span class="text-sm">sqft</span></div>
+    </div>
+</div>
+
+<!-- Main Analysis Section -->
+<div class="analysis-section">
+    <div class="section-header" style="display: flex; align-items: baseline; gap: 16px;">
+        <h3 class="section-title">Deep Dive Tableau Analytics</h3>
+        <span style="font-size: 13px; color: var(--text-secondary); background: var(--brand-light); padding: 4px 10px; border-radius: 6px; font-weight: 500;">
+            <i class="ph ph-info" style="vertical-align: middle; margin-right: 4px; color: var(--brand-primary);"></i>
+            Click the tabs inside the embedded Tableau view below to explore different storylines and details.
+        </span>
+    </div>
+    
+    <div class="glass-panel" id="tableau-wrapper">
+        <!-- Tableau Embed Code -->
+        <div class='tableauPlaceholder' id='viz1772982428454' style='position: relative; width: 100%; height: 100%;'>
+            <noscript>
+                <a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Da&#47;DataVisualisationsandDashboardsandStory&#47;Story&#47;1_rss.png' style='border: none' /></a>
+            </noscript>
+            <object class='tableauViz' style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                <param name='embed_code_version' value='3' /> 
+                <param name='site_root' value='' />
+                <param name='name' value='DataVisualisationsandDashboardsandStory&#47;Story' />
+                <param name='tabs' value='yes' />
+                <param name='toolbar' value='yes' />
+                <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Da&#47;DataVisualisationsandDashboardsandStory&#47;Story&#47;1.png' /> 
+                <param name='animate_transition' value='yes' />
+                <param name='display_static_image' value='yes' />
+                <param name='display_spinner' value='yes' />
+                <param name='display_overlay' value='yes' />
+                <param name='display_count' value='yes' />
+                <param name='language' value='en-US' />
+            </object>
+        </div>                
+        <script type='text/javascript'>                    
+            var divElement = document.getElementById('viz1772982428454');                    
+            var vizElement = divElement.getElementsByTagName('object')[0];                    
+            vizElement.style.width='100%';
+            // Setting visual frame logic to be fully contained and responsive
+            vizElement.style.height=(divElement.offsetWidth*0.65)+'px';
+            vizElement.style.minHeight='750px'; // Ensuring it looks good on big screens
+            var scriptElement = document.createElement('script');                    
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+        </script>
+    </div>
+</div>
+{% endblock %}

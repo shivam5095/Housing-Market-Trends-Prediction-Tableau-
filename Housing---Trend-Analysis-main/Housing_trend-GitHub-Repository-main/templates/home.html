@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div style="margin-bottom: 40px; text-align: center; padding-top: 40px;">
+    <div style="width: 100%;">
+        <h2 class="page-title" style="font-size: 36px; margin-bottom: 12px; text-align: center;">Welcome to Housing Insights</h2>
+        <p class="page-subtitle" style="font-size: 18px; max-width: 600px; margin: 0 auto; text-align: center;">Your powerful analytics platform for discovering real estate trends, housing data, and uncovering opportunities.</p>
+    </div>
+</div>
+
+<div style="display: flex; gap: 24px; justify-content: center; margin-top: 40px;">
+    <div class="kpi-card" style="flex: 1; max-width: 320px; text-align: center; padding: 32px 24px;">
+        <div class="kpi-icon-wrapper bg-blue-subtle" style="margin: 0 auto 16px; width: 64px; height: 64px; font-size: 32px;">
+            <i class="ph ph-buildings text-blue"></i>
+        </div>
+        <h3 class="kpi-title" style="font-size: 18px; margin-bottom: 8px;">Extensive Data</h3>
+        <p class="page-subtitle">Analyze over 21,000+ detailed property records with high accuracy.</p>
+    </div>
+    
+    <div class="kpi-card" style="flex: 1; max-width: 320px; text-align: center; padding: 32px 24px;">
+        <div class="kpi-icon-wrapper bg-purple-subtle" style="margin: 0 auto 16px; width: 64px; height: 64px; font-size: 32px;">
+            <i class="ph ph-chart-polar text-purple"></i>
+        </div>
+        <h3 class="kpi-title" style="font-size: 18px; margin-bottom: 8px;">Tableau Powered</h3>
+        <p class="page-subtitle">Interactive Tableau visualizations embedded directly for deep-dive insights.</p>
+    </div>
+</div>
+
+<div style="text-align: center; margin-top: 48px;">
+    <a href="{{ url_for('dashboard') }}" class="primary-btn" style="display: inline-flex; font-size: 16px; padding: 14px 28px; text-decoration: none;">Go to Dashboard</a>
+</div>
+{% endblock %}

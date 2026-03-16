@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Housing Market Trends Analytics</title>
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 256 256%22><text y=%22224%22 font-size=%22224%22>🏠</text></svg>">
+    <!-- Modern Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Phosphor Icons for premium icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo-container">
+                <div class="logo-icon-wrapper">
+                    <i class="ph-fill ph-house-line logo-icon"></i>
+                </div>
+                <h1 class="logo-text">Housing<span class="highlight">Insights</span></h1>
+            </div>
+            
+            <nav class="nav-menu">
+                <p class="nav-heading">MAIN MENU</p>
+                <a href="{{ url_for('index') }}" class="nav-item {% if active_page == 'home' %}active{% endif %}" id="nav-home">
+                    <i class="ph ph-house"></i>
+                    <span>Home</span>
+                </a>
+                <a href="{{ url_for('about') }}" class="nav-item {% if active_page == 'about' %}active{% endif %}" id="nav-about">
+                    <i class="ph ph-info"></i>
+                    <span>About</span>
+                </a>
+                <a href="{{ url_for('dashboard') }}" class="nav-item {% if active_page == 'dashboard' %}active{% endif %}" id="nav-dashboard">
+                    <i class="ph ph-squares-four"></i>
+                    <span>Dashboard & Story</span>
+                </a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <div class="avatar">
+                        <img src="https://ui-avatars.com/api/?name=ABC+Company&background=0D8ABC&color=fff" alt="User Avatar">
+                    </div>
+                    <div class="user-details">
+                        <span class="user-name">ABC Company</span>
+                        <span class="user-role">Estate Analyst</span>
+                    </div>
+                    <i class="ph ph-caret-up user-menu-icon"></i>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Workspace -->
+        <main class="main-content">
+            <div class="content-wrapper">
+                {% block content %}{% endblock %}
+            </div>
+        </main>
+    </div>
+</body>
+</html>

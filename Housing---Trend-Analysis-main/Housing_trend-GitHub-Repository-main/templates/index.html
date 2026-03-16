@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Housing Market Trends Analytics</title>
+    <!-- Modern Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Phosphor Icons for premium icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo-container">
+                <div class="logo-icon-wrapper">
+                    <i class="ph-fill ph-house-line logo-icon"></i>
+                </div>
+                <h1 class="logo-text">Housing<span class="highlight">Insights</span></h1>
+            </div>
+            
+            <nav class="nav-menu">
+                <p class="nav-heading">MAIN MENU</p>
+                <a href="#" class="nav-item active" id="nav-dashboard">
+                    <i class="ph ph-squares-four"></i>
+                    <span>Market Overview</span>
+                </a>
+                <a href="#" class="nav-item" id="nav-sales">
+                    <i class="ph ph-chart-line-up"></i>
+                    <span>Sales Analytics</span>
+                </a>
+                <a href="#" class="nav-item" id="nav-demographics">
+                    <i class="ph ph-users"></i>
+                    <span>Demographics</span>
+                </a>
+                <a href="#" class="nav-item" id="nav-reports">
+                    <i class="ph ph-file-text"></i>
+                    <span>Export Reports</span>
+                </a>
+                
+                <p class="nav-heading mt-6">SETTINGS</p>
+                <a href="#" class="nav-item" id="nav-preferences">
+                    <i class="ph ph-gear"></i>
+                    <span>Preferences</span>
+                </a>
+                <a href="#" class="nav-item" id="nav-help">
+                    <i class="ph ph-question"></i>
+                    <span>Help Center</span>
+                </a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <div class="avatar">
+                        <img src="https://ui-avatars.com/api/?name=ABC+Company&background=0D8ABC&color=fff" alt="User Avatar">
+                    </div>
+                    <div class="user-details">
+                        <span class="user-name">ABC Company</span>
+                        <span class="user-role">Estate Analyst</span>
+                    </div>
+                    <i class="ph ph-caret-up user-menu-icon"></i>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Workspace -->
+        <main class="main-content">
+            <div class="content-wrapper">
+                <!-- Page Header Elements -->
+                <div class="page-header">
+                    <div>
+                        <h2 class="page-title">Market Analysis Overview</h2>
+                        <p class="page-subtitle">Interactive exploration of 21,609 properties in our housing dataset.</p>
+                    </div>
+                </div>
+
+                <!-- KPI Cards Section -->
+                <div class="kpi-grid">
+                    <div class="kpi-card">
+                        <div class="kpi-header">
+                            <h3 class="kpi-title">Total Properties</h3>
+                            <div class="kpi-icon-wrapper bg-blue-subtle">
+                                <i class="ph ph-buildings text-blue"></i>
+                            </div>
+                        </div>
+                        <div class="kpi-value">21,609</div>
+                        <div class="kpi-trend positive">
+                            <i class="ph ph-trend-up"></i>
+                            <span>+4.2% from last month</span>
+                        </div>
+                    </div>
+                    
+                    <div class="kpi-card">
+                        <div class="kpi-header">
+                            <h3 class="kpi-title">Average Sale Price</h3>
+                            <div class="kpi-icon-wrapper bg-green-subtle">
+                                <i class="ph ph-currency-dollar text-green"></i>
+                            </div>
+                        </div>
+                        <div class="kpi-value">$540,088</div>
+                        <div class="kpi-trend positive">
+                            <i class="ph ph-trend-up"></i>
+                            <span>+1.8% from last month</span>
+                        </div>
+                    </div>
+
+                    <div class="kpi-card">
+                        <div class="kpi-header">
+                            <h3 class="kpi-title">Average Flat Area</h3>
+                            <div class="kpi-icon-wrapper bg-purple-subtle">
+                                <i class="ph ph-selection-all text-purple"></i>
+                            </div>
+                        </div>
+                        <div class="kpi-value">2,080 <span class="text-sm">sqft</span></div>
+                        <div class="kpi-trend neutral">
+                            <i class="ph ph-minus"></i>
+                            <span>No change</span>
+                        </div>
+                    </div>
+
+                    <div class="kpi-card">
+                        <div class="kpi-header">
+                            <h3 class="kpi-title">Recently Renovated</h3>
+                            <div class="kpi-icon-wrapper bg-orange-subtle">
+                                <i class="ph ph-paint-roller text-orange"></i>
+                            </div>
+                        </div>
+                        <div class="kpi-value">914</div>
+                        <div class="kpi-trend positive">
+                            <i class="ph ph-trend-up"></i>
+                            <span>+12.5% from last month</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Analysis Section -->
+                <div class="analysis-section">
+                    <div class="section-header">
+                        <h3 class="section-title">Deep Dive Tableau Analytics</h3>
+                    </div>
+                    
+                    <div class="glass-panel" id="tableau-wrapper">
+                        <!-- Tableau Embed Code -->
+                        <div class='tableauPlaceholder' id='viz1772982428454' style='position: relative; width: 100%; height: 100%;'>
+                            <noscript>
+                                <a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Da&#47;DataVisualisationsandDashboardsandStory&#47;Story&#47;1_rss.png' style='border: none' /></a>
+                            </noscript>
+                            <object class='tableauViz' style='display:none;'>
+                                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                                <param name='embed_code_version' value='3' /> 
+                                <param name='site_root' value='' />
+                                <param name='name' value='DataVisualisationsandDashboardsandStory&#47;Story' />
+                                <param name='tabs' value='yes' />
+                                <param name='toolbar' value='yes' />
+                                <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Da&#47;DataVisualisationsandDashboardsandStory&#47;Story&#47;1.png' /> 
+                                <param name='animate_transition' value='yes' />
+                                <param name='display_static_image' value='yes' />
+                                <param name='display_spinner' value='yes' />
+                                <param name='display_overlay' value='yes' />
+                                <param name='display_count' value='yes' />
+                                <param name='language' value='en-US' />
+                            </object>
+                        </div>                
+                        <script type='text/javascript'>                    
+                            var divElement = document.getElementById('viz1772982428454');                    
+                            var vizElement = divElement.getElementsByTagName('object')[0];                    
+                            vizElement.style.width='100%';
+                            // Setting visual frame logic to be fully contained and responsive
+                            vizElement.style.height=(divElement.offsetWidth*0.65)+'px';
+                            vizElement.style.minHeight='750px'; // Ensuring it looks good on big screens
+                            var scriptElement = document.createElement('script');                    
+                            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+                            vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
